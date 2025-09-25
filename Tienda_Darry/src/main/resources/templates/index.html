@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<!--Mi primera pagina html del curso-->
+<!-- <!DOCTYPE html>
+
 <html>
     <head>
         <title>TechShop Autos</title>
@@ -7,14 +7,15 @@
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <header>
-            <div class="logo">TechShop Autos DOV</div>
+       <header>
+            <div class="logo">
+                <a href="/">TechShop Autos</a>
+            </div>
             <nav>
                 <ul class="top-nav-link">
-                    <li class="nav-link"><a href="#">Inicio</a></li>
-                    <li class="nav-link"><a href="#">Mi Asiento</a></li>
-                    <li class="nav-link"><a href="#">Mi Perfil</a></li>
-                    <li class="nav-link"><a href="#">Cerrar Sesión</a></li>
+                    <li class="nav-link"><a href="/ejemplo2">Ejemplo 2</a></li>
+                    <li class="nav-link"><a href="/iframes">Iframes</a></li>
+                    <li class="nav-link"><a href="/multimedia">Multimedia</a></li>                    
                 </ul>
             </nav>
         </header>
@@ -30,14 +31,56 @@
         </aside>
 
         <main>
-            <section class="contenido-principal">
-                <h1 class="titulo-principal">Esta es la tienda en línea del curso</h1>
-                <p>Bienvenido a TechShop Autos, donde la elegancia y la potencia se encuentran.</p>
+            <section>
+                <h1>Vista embebida</h1>
+                <iframe src="https://ufidelitas.ac.cr/carreras/?utm_source=GoogleSearch&utm_medium=ppc&utm_campaign=trafico&gad_source=1&gad_campaignid=21155728993&gclid=Cj0KCQjwrc7GBhCfARIsAHGcW5U1GYPQwyOiXqEF8pHNwKOpfL_Ttu-XKACNWs2Hsf3D_tTvE0zfewIaAoQ-EALw_wcB" class="iframe-embed"></iframe>
             </section>
+
+            <section>
+
+                <h1>Video destacado</h1>
+
+                <iframe class ="youtube-video" src="https://www.youtube.com/embed/b_PHuPm769Q" allowfullscreen></iframe>
+
+            </section>
+
+            <section>
+                <h1>Ubicación destacada</h1>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4959.497119251383!2d-85.7495900885059!3d10.528156963678814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e2894ffe21ca5%3A0x2aaa87e4ab48e3a1!2sHotel%20Riu%20Guanacaste%20Costa%20Rica!5e1!3m2!1ses-419!2scr!4v1758774209303!5m2!1ses-419!2scr" 
+                        allowfullscreen 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+
+
         </main>
 
         <footer>
             <p>Todos los Derechos Reservados TechShop 2023 &copy;</p>
         </footer>
+       
+       
+    </body>
+</html>-->
+
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"      
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    
+    <head th:replace="~{general/fragmentos :: head}"/>
+    <body>
+            <header th:replace="~{general/fragmentos :: header}"/>
+        
+            <footer th:replace="~{general/fragmentos :: footer}"/>
+        
     </body>
 </html>

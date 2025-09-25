@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+<!--Mi primera pagina html del curso-->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>TechShop Autos</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header>
+            <div class="logo">
+                <a href="/">TechShop Autos</a>
+            </div>
+            <nav>
+                <ul class="top-nav-link">
+                    <li class="nav-link"><a href="/ejemplo2">Ejemplo 2</a></li>
+                    <li class="nav-link"><a href="/iframes">Iframes</a></li>
+                    <li class="nav-link"><a href="/multimedia">Multimedia</a></li>                    
+                </ul>
+            </nav>
+        </header>
+
+        <aside>
+            <h2>Categorías</h2>
+            <ul>
+                <li><a href="#">SUV</a></li>
+                <li><a href="#">Sedán</a></li>
+                <li><a href="#">Deportivos</a></li>
+                <li><a href="#">Camionetas</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <!-- Sección de audio -->
+            <section>
+                <h1>Audio destacado</h1>
+                <audio controls>
+                    <source src="/audios/musica.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </section>
+
+            <!-- Sección de video -->
+            <section>
+                <h1>Video destacado</h1>
+                <video controls class="video-player">
+                    <source src="/videos/torpedo.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </section>
+        </main>
+
+        <footer>
+            <p>Todos los Derechos Reservados TechShop 2023 &copy;</p>
+        </footer>
     </body>
 </html>
