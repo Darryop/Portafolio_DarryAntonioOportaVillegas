@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import lombok.Data;
 /**
  *
- * @author bryan
+ * @author darry
  */
 @Data
 @Entity
@@ -25,7 +25,7 @@ public class Categoria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
-    private Long idCategoria;
+    private int idCategoria;
 
     @NotBlank(message = "La descripción no puede estar vacía")
     @Size(max = 50, message = "La descripción no puede exceder los 50 caracteres")
