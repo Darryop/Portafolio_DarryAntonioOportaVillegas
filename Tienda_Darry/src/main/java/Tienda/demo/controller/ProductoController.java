@@ -25,7 +25,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  *
- * @author bryan
+ * @author darry
  */
 @Controller
 @RequestMapping("/producto")

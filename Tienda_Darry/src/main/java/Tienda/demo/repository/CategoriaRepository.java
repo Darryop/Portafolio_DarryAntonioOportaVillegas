@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
- * @author darrhy
+ * @author darry
  */
 public interface CategoriaRepository extends JpaRepository<Categoria,Integer>{
     public List<Categoria> findByActivoTrue();

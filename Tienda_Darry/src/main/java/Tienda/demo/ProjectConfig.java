@@ -95,8 +95,10 @@ public class ProjectConfig implements WebMvcConfigurer {
 
     @Bean
     public Storage storage() throws IOException {
-        // Cambia esto por la ruta correcta
-        ClassPathResource resource = new ClassPathResource("techshop-b3907-firebase-adminsdk-fbsvc-7aa01b3ecc.json");
+        // Construye la ruta completa usando las variables
+        String fullPath = jsonPath + jsonFile;
+        ClassPathResource resource = new ClassPathResource(fullPath);
+
         try (InputStream inputStream = resource.getInputStream()) {
             GoogleCredentials credentials = GoogleCredentials.fromStream(inputStream);
             return StorageOptions.newBuilder().setCredentials(credentials).build().getService();

@@ -9,7 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-//import java.util.List;
+import java.util.List;
 import lombok.Data;
 /**
  *
@@ -38,6 +38,10 @@ public class Categoria implements Serializable {
 
     @Column(nullable = false)
     private boolean activo;
+    
+    //Relación de uno a muchos con la clase Producto
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 
     @Column(name = "fecha_creacion", updatable = false, insertable = false)
     private LocalDateTime fechaCreacion;
